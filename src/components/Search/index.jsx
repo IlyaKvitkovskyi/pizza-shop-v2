@@ -1,8 +1,11 @@
 import React from 'react';
+import { SearchContext } from '../../App';
 
 import styles from './Search.module.scss';
 
-export default function Search({ searchValue, setSearchValue }) {
+export default function Search() {
+  const { searchValue, setSearchValue } = React.useContext(SearchContext);
+
   return (
     <div className={styles.root}>
       <svg className={styles.icon} viewBox="0 0 32 32">
@@ -23,7 +26,8 @@ export default function Search({ searchValue, setSearchValue }) {
           height="48"
           viewBox="0 0 48 48"
           width="48"
-          xmlns="http://www.w3.org/2000/svg">
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <path d="M38 12.83l-2.83-2.83-11.17 11.17-11.17-11.17-2.83 2.83 11.17 11.17-11.17 11.17 2.83 2.83 11.17-11.17 11.17 11.17 2.83-2.83-11.17-11.17z" />
           <path d="M0 0h48v48h-48z" fill="none" />
         </svg>
