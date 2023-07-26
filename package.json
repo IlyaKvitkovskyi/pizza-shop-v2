@@ -1,4 +1,5 @@
 {
+  "homepage": "http://pizza-shop.github.io/pizza-shop-v2",
   "name": "pizza-shop-v2",
   "version": "0.1.0",
   "private": true,
@@ -15,6 +16,7 @@
     "ahooks": "^3.7.7",
     "axios": "^1.1.3",
     "clsx": "^1.2.1",
+    "gh-pages": "^5.0.0",
     "lodash.debounce": "^4.0.8",
     "qs": "^6.11.0",
     "react": "^18.2.0",
@@ -30,6 +32,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gp-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
